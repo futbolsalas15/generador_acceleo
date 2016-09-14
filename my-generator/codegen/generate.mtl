@@ -17,7 +17,9 @@
 [template public generarNombre(c: Class)]
 	<li>[c.name/]</li>
 	<ul>
-		[c.attribute.genProp() /]		
+		[for (p : Property | c.attribute)]
+			[p.genProp()/]
+		[/for]		
 	</ul>
 [/template]
 
