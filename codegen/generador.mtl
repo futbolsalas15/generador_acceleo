@@ -1,0 +1,26 @@
+[comment encoding = UTF-8 /]
+[module generador('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[template public generate(m : Model)]
+	[comment @main/]
+	[file (m.name.concat('.md'), false, 'UTF-8')]
+	[m.packagedElement.gen()/]
+	[/file]
+[/template]
+
+[template public gen(p : PackageableElement) /]
+
+[template public gen(p : Package) ? (not p.packagedElement->isEmpty())]
+	<html>
+	<body>
+		<ul>
+		[p.packagedElement->select(not oclIsKindOf(Package)).gen()/]
+		</ul>
+	</body>
+	</html>
+	[comment p.packagedElement->select(oclIsKindOf(Package)).gen()/]
+[/template]
+
+[template public generateElement(c: Class)]
+	<li>[c.name/]</li>
+[/template]
