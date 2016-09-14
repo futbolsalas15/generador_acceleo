@@ -31,7 +31,7 @@
 	<div class="panel panel-default">
 		<div class="panel-heading" role="tab" id="heading[c.name/]">
 	      <h4 class="panel-title">
-	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapse[c.name/]">
+	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[c.name/]" aria-expanded="false" aria-controls="collapse[c.name/]">
 	          [c.name/]
 	        </a>
 	      </h4>
