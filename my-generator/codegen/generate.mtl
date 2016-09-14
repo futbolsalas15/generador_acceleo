@@ -42,7 +42,7 @@
 	      <div class="panel-body">
 			<div class="row">
 				<div class="col-md-6">
-					[c.getEAnnotation('genmymodel').details->select(d | d.key = 'gmm-documentation') /]
+					[c.getEAnnotation('genmymodel').details->collect(key.equalsIgnoreCase('gmm-documentation'))->first().value /]
 				</div>
 				<div class="col-md-6">
 					<ul>
