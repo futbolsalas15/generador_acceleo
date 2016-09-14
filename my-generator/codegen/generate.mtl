@@ -40,7 +40,7 @@
 	      <div class="panel-body">
 			<div class="row">
 				<div class="col-md-6">
-					[c.getEAnnotation('genmymodel').details->select(d | d.key = 'gmm-documentation')->map(det - det.value) /]
+					[c.getEAnnotation('genmymodel').details->select(d | d.key = 'gmm-documentation')->first()->value /]
 				</div>
 				<div class="col-md-6">
 					<ul>
