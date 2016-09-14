@@ -16,4 +16,11 @@
 
 [template public generarNombre(c: Class)]
 	<li>[c.name/]</li>
+	<ul>
+		[c.attribute.genProp() /]		
+	</ul>
+[/template]
+
+[template public genProp(p : Property)]
+	<li>[p.name/]: [if (p.type <> null)][p.type.qualifiedName/][else]Undefined[/if] </li>
 [/template]
